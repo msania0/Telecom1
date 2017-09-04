@@ -1,0 +1,123 @@
+﻿
+<div class="status">
+  <h4>Total Leased Bandwidth</h4>
+  <p>2000</p>
+  <h4>Total Bandwidth Provided</h4>
+  <p>200</p>
+  <h4>Unused  Bandwidth</h4>
+  <p>1800</p>
+  <h4>Total Payment Received</h4>
+  <p>2000</p>
+</div>
+<div class="container detail">
+  <button class="buttonClass" (click)="openLeaseModal()">Lease Bandwidth</button>
+  <button class="buttonClass" (click)="openInvoiceModal()">Create Invoice</button>
+  <button class="buttonClass" >Renew Contract</button>
+</div>
+
+<div class="row container detail ">
+  <div class="  col-xs-1 ">
+    <div (click)="swipe()" class="arrow glyphicon glyphicon-menu-left"></div>
+  </div>
+  <div [hidden]="showInvoiceDiv" class=" divBox  col-xs-10 ">
+    <div>
+      <h3>Invoice List</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Bandwidth</th>
+              <th>Payment</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor ="let cust of customers_list">
+              <td>{{cust.name}}</td>
+              <td>{{cust.startDate}}</td>
+              <td>{{cust.endDate}}</td>
+              <td>{{cust.bw}}</td>
+              <td>{{cust.payment}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <div [hidden]="showLeaseDiv" class=" divBox col-xs-10"><h3>Lease List</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Service Provider Name</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Bandwidth</th> 
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor =" let lease of lease_list ">
+              <td>{{lease.name}}</td>
+              <td>{{lease.startDate}}</td>
+               <td>{{lease.endDate}}</td>
+              <td>{{lease.bw}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+  
+  </div>
+
+  
+  <div class="col-xs-1 ">
+    <div (click)="swipe()" class="arrow glyphicon glyphicon-menu-left"></div>
+  </div>
+
+  </div>
+
+
+
+
+  <div *ngIf="show" class="modalDialog">
+    <div class="form">
+      <button (click)="closeLeaseModal()" title="Close" class="close">X</button>
+      <form class="sp">
+
+        <p>Bandwidth</p>
+        <input type="text" [(ngModel)]="bandwidth" name="bandwidth" />
+        <p>Start Date</p>
+        <input type="date" [(ngModel)]="startDate" name="startDate" />
+        <p>End Date</p>
+        <input type="date" [(ngModel)]="endDate" name="endDate" />
+        <p>Service Provider</p>
+        <select [(ngModel)]="selectedOption" name="selectSP">
+          <option *ngFor="let list of listSP">{{list}}</option>
+        </select>
+        <button class="formbutton" (click)="LeaseButton(selectedOption,startDate,endDate,bandwidth)">Lease</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div *ngIf="showInvoice" class="modalDialog1">
+    <div class="form">
+      <button (click)="closeInvoiceModal()" title="Close" class="close">X</button>
+      <form class="sp">
+        <p>Customer Name</p>
+        <input type="text" [(ngModel)]="customerName" name="custommername" />
+        <p>Bandwidth</p>
+        <input type="text" [(ngModel)]="bandwidth1" name="bandwidth" />
+        <p>Start Date</p>
+        <input type="date" [(ngModel)]="startDate1" name="startDate" />
+        <p>End Date</p>
+        <input type="date" [(ngModel)]="endDate1" name="endDate" />
+        <p>Payment</p>
+        <input type="text" [(ngModel)]="payment" name="payment" />
+        <button class="formbutton" (click)="InvoiceButton(customername,selectedOption1,startDate1,endDate1,bandwidth1,payment)">Create Invoice</button>
+      </form>
+    </div>
+  </div>
+

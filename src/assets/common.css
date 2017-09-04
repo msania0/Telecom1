@@ -1,0 +1,214 @@
+﻿
+.buttonClass {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  margin: 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+.modalDialog1 {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 199999;
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+
+
+  .modalDialog > div, .modalDialog1 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+  }
+
+.close {
+  margin: 10px;
+  background: #606061;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 25px;
+  right: -12px;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+  cursor: pointer;
+}
+
+  .close:hover {
+    background: #00d9ff;
+  }
+
+
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 48%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+.form p {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 48%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: grey;
+  float: left;
+  margin-right: 3px;
+}
+
+.form select {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 48%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: grey;
+}
+
+.formbutton {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+  background: #43A047;
+}
+
+.sp {
+  margin-top: 50px;
+}
+
+.detail {
+  width: 75%;
+  float: left;
+  margin: 10px;
+}
+
+.status {
+  width: 20%;
+  float: right;
+  height: 700px;
+  z-index: 2;
+  background: #4CAF50;
+}
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+  background: #4CAF50;
+  padding: 6px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.arrow {
+  margin-top: 200px;
+  background-color: #4CAF50;
+  padding: 20%;
+  cursor: pointer;
+}
+
+.divBox {
+  box-shadow: 2px 2px 2px 2px lightgrey;
+  height: 500px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  border-bottom: 2px solid green;
+}
+
+td, th {
+  padding-bottom: 3px;
+}
+
+h4 {
+  font-size: 18px;
+  background: white;
+  margin: 5px;
+  padding: 6px;
+  color: #43A047;
+}
+
+p {
+  text-align: center;
+}

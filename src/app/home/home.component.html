@@ -1,0 +1,16 @@
+﻿<div [hidden]="hideDiv" class="login-page">
+  <div class="form">
+
+    <form class="login-form">
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <p>User Type</p>
+      <select [(ngModel)]="selectedOption" name="selectUser">
+        <option >Operator</option>
+        <option >Service Provider</option>
+      </select>
+      <button (click)="shift()"[routerLink]="LoginButton(selectedOption)" >login</button>
+    </form>
+  </div>
+</div>
+
